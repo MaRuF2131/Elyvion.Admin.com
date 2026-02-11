@@ -62,7 +62,7 @@ export const AuthProvider = ({ children }) => {
     try{
       console.log("callllll");
       
-      const res= await axios.post("http://localhost:4000/logout",{})
+      const res= await axios.post("https://elyvion-beckend-com.vercel.app/logout",{})
       console.log("resssss",res);    
       toast.success(res?.response?.data?.message || '')
       await removeUser();
